@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/poolpass-uploads/b0a133cd-7024-42bb-b333-dc78e02d1272.png" 
+              src="/lovable-uploads/b0a133cd-7024-42bb-b333-dc78e02d1272.png" 
               alt="PoolPass Logo" 
               className="h-16 md:h-20 w-auto" 
             />
