@@ -1,23 +1,34 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { 
-	@@ -26,7 +25,7 @@ interface PoolCardProps {
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { cn } from '@/lib/utils';
+import { toast } from '@/components/ui/use-toast';
+
+interface PoolCardProps {
+  id: string;
+  name: string;
+  location: string;
+  price: number;
   image: string;
   indoorOutdoor: 'indoor' | 'outdoor' | 'both';
   amenities?: string[];
-  fallbackImage?: string; // Added fallbackImage property
+  fallbackImage?: string;
   className?: string;
 }
 
-	@@ -40,53 +39,68 @@ const PoolCard = ({
+const PoolCard = ({
+  id,
+  name,
+  location,
+  price,
   image,
   indoorOutdoor,
   amenities = [],
-  fallbackImage, // Added fallbackImage parameter
+  fallbackImage,
   className
 }: PoolCardProps) => {
   
@@ -39,13 +50,12 @@ import {
       <Card className="overflow-hidden border h-full group">
         {/* Image Container */}
         <div className="relative">
-          <AspectRatio ratio={4/3}>
+          <AspectRatio ratio={4 / 3}>
             <img 
               src={image} 
               alt={name}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               onError={(e) => {
-                // Use the fallbackImage if provided, otherwise use a placeholder
                 (e.target as HTMLImageElement).src = fallbackImage || `https://via.placeholder.com/800x600?text=${encodeURIComponent(name)}`;
               }}
             />
@@ -54,8 +64,6 @@ import {
             <Badge 
               className={cn(
                 "text-xs font-medium px-2 py-0.5",
-                indoorOutdoor === 'indoor' ? "bg-pool-light text-pool-dark" : 
-                indoorOutdoor === 'outdoor' ? "bg-pool-light text-pool-dark" :
                 "bg-pool-light text-pool-dark"
               )}
             >
@@ -67,14 +75,13 @@ import {
         <CardHeader className="p-4 pb-2">
           <div className="flex justify-between items-start">
             <CardTitle className="text-lg line-clamp-1">{name}</CardTitle>
-	@@ -98,38 +112,45 @@ const PoolCard = ({
           </div>
           <CardDescription className="text-sm">{location}</CardDescription>
         </CardHeader>
 
         <CardContent className="p-4 pt-0">
           {/* Amenities */}
-          {amenities && amenities.length > 0 && (
+          {amenities.length > 0 && (
             <div className="mb-3 flex flex-wrap gap-1">
               {amenities.slice(0, 3).map((amenity, i) => (
                 <Badge key={i} variant="outline" className="text-xs bg-pool-light text-pool-dark">
@@ -109,4 +116,5 @@ import {
     </Link>
   );
 };
+
 export default PoolCard;
