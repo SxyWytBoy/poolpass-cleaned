@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';  // Use next/link in Next.js
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import HowItWorks from '@/components/HowItWorks';
@@ -42,4 +42,29 @@ const featuredPools = [
     image: "https://images.unsplash.com/photo-1551123847-4041291bec0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     indoorOutdoor: "both" as const,
     amenities: ["Garden Access", "Changing Rooms", "Food Available"]
- },
+  }
+];  // <-- close the array here
+
+const HomePage = () => {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <HowItWorks />
+
+      <section className="featured-pools">
+        <h2>Featured Pools</h2>
+        <div className="pool-list">
+          {featuredPools.map(pool => (
+            <PoolCard key={pool.id} pool={pool} />
+          ))}
+        </div>
+      </section>
+
+      <Testimonials />
+      <Footer />
+    </>
+  );
+};
+
+export default HomePage;
