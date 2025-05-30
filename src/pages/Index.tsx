@@ -1,4 +1,10 @@
-import React from "react";
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import HowItWorks from '@/components/HowItWorks';
+import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import PoolCard from '@/components/PoolCard';
 
@@ -36,21 +42,3 @@ const featuredPools = [
     image: "https://images.unsplash.com/photo-1551123847-4041291bec0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     indoorOutdoor: "both" as const,
     amenities: ["Garden Access", "Changing Rooms", "Food Available"]
-  }
-];
-
-const Index = () => {
-  return (
-    <main className="min-h-screen bg-gray-50 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Featured Pools</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {featuredPools.map(pool => (
-          <PoolCard key={pool.id} pool={pool} />
-        ))}
-      </div>
-      <Footer />
-    </main>
-  );
-};
-
-export default Index;
