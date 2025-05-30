@@ -58,27 +58,27 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex space-x-8">
-              <a href="#" className="text-gray-500 hover:text-pool-primary" aria-label="Facebook">
+              <a href="https://www.facebook.com/poolpassuk" className="text-gray-500 hover:text-pool-primary" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12..." clipRule="evenodd" />
+                  <path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07C2 17.1 5.66 21.24 10.44 22v-7.01H7.9v-2.92h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.92h-2.34V22C18.34 21.24 22 17.1 22 12.07z" />
                 </svg>
               </a>
 
               <a href="https://www.instagram.com/poolpassuk/" className="text-gray-500 hover:text-pool-primary" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06..." clipRule="evenodd" />
+                  <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.5a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Zm5.25-.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" />
                 </svg>
               </a>
 
               <a href="https://www.linkedin.com/company/poolpass" className="text-gray-500 hover:text-pool-primary" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zM7 19h-3v-10h3v10zM5.5 7.6c-1 0-1.6-.7-1.6-1.5s.6-1.5 1.6-1.5c1 0 1.6.7 1.6 1.5s-.6 1.5-1.6 1.5zM20 19h-3v-5.4c0-1.3-.5-2.2-1.7-2.2-1 0-1.5.7-1.8 1.3-.1.2-.1.6-.1.9v5.4h-3s.1-8.8 0-9.7h3v1.4c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.7z"/>
+                  <path d="M19 0h-14C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM7 19H4v-9h3v9zm-1.5-10.5c-1 0-1.5-.7-1.5-1.5s.5-1.5 1.5-1.5 1.5.7 1.5 1.5-.5 1.5-1.5 1.5zm13.5 10.5h-3v-5c0-1.2-.4-2-1.5-2s-1.7.9-1.7 2v5h-3v-9h3v1.2c.4-.7 1.3-1.2 2.5-1.2 1.9 0 3.2 1.2 3.2 3.7v5.3z" />
                 </svg>
               </a>
 
-              <a href="https://twitter.com/poolpassuk" className="text-gray-500 hover:text-pool-primary" aria-label="X (formerly Twitter)" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/poolpassuk" className="text-gray-500 hover:text-pool-primary" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.59 3H17.6l-4.2 5.35L8.5 3H3l6.98 9.62L3 21h3.01l4.88-6.23L15.5 21h5.5l-7.22-9.96L20.59 3z"/>
+                  <path d="M22 4.01c-.77.34-1.6.57-2.47.67a4.28 4.28 0 0 0 1.88-2.36 8.47 8.47 0 0 1-2.7 1.03 4.23 4.23 0 0 0-7.2 3.86A12 12 0 0 1 3.17 3.15a4.23 4.23 0 0 0 1.31 5.64 4.22 4.22 0 0 1-1.92-.53v.05a4.24 4.24 0 0 0 3.39 4.15 4.3 4.3 0 0 1-1.91.07 4.25 4.25 0 0 0 3.96 2.94 8.5 8.5 0 0 1-5.26 1.82A8.61 8.61 0 0 1 2 18.42a12.01 12.01 0 0 0 6.49 1.9c7.79 0 12.05-6.47 12.05-12.08 0-.18-.01-.36-.02-.53A8.52 8.52 0 0 0 22 4.01z" />
                 </svg>
               </a>
             </div>
