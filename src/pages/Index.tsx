@@ -42,3 +42,4 @@ const featuredPools = [
     image: "https://images.unsplash.com/photo-1551123847-4041291bec0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
     indoorOutdoor: "both" as const,
     amenities: ["Garden Access", "Changing Rooms", "Food Available"]
+ },
